@@ -26,3 +26,27 @@ Sample Input:
 [4, 3, 4, 4, 2, 2, 2, 3, 2, 3, 1, 6, 1, 3, 1, 2, 2, 1, 1, 3, 3, 2, 2, 2, 2, 1, 3, 3, 3, 1, 2, 1, 3, 3, 3, 1, 3, 1, 2, 3, 2, 4, 2, 4, 4, 4, 3, 2, 2, 3, 3, 3, 3, 3, 1, 2, 4, 5, 3, 3, 2, 1, 2, 2, 3, 3, 2, 6, 2, 2, 3, 3, 2, 1, 3, 3, 2] 
 
 ![image](https://github.com/user-attachments/assets/74f44a85-3b32-4b5a-b082-9b561508c009)
+
+
+Source Code: 
+import numpy as np
+import matplotlib.pyplot as plt
+
+protein = eval(input())
+
+fig = plt.figure()
+
+# Count the frequency of each protein value
+unique, counts = np.unique(protein, return_counts=True)
+
+# Create the bar plot
+bars = plt.bar(unique, counts, color='g')
+
+# Add the xlabel
+plt.xlabel("Protein amount in grams")
+
+# Add the ylabel
+plt.ylabel("Number of cereals")
+
+# Add the title
+plt.title("Protein comparison")
