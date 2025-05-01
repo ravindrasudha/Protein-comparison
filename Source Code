@@ -1,0 +1,21 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+protein = eval(input())
+
+fig = plt.figure()
+
+# Count the frequency of each protein value
+unique, counts = np.unique(protein, return_counts=True)
+
+# Create the bar plot
+bars = plt.bar(unique, counts, color='g')
+
+# Add the xlabel
+plt.xlabel("Protein amount in grams")
+
+# Add the ylabel
+plt.ylabel("Number of cereals")
+
+# Add the title
+plt.title("Protein comparison")
